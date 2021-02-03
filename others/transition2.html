@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <style media="screen">
+    *{
+      box-sizing: border-box;
+    }
+    .box1 {
+      vertical-align: middle;
+      padding: 90px 5px;
+      width: 200px;
+      height: 200px;
+      background-color: #8DD0BA;
+      transition: background-color 800ms ease-in;
+    }
+
+    .box1:hover {
+      background-color: #F8D3DA;
+    }
+
+    .box1_line1, .box1_line2 {
+
+      width: 100%;
+      height: 5px;
+      margin-bottom: 5px;
+      background-color: #206866;
+      transition: transform 500ms ease-in, background-color 500ms ease-in;
+    }
+
+    .box1:hover .box1_line1 {
+      transform: translateY(100%) rotate(45deg);
+      background-color: #B14454;
+    }
+
+    .box1:hover .box1_line2 {
+      transform: translateY(-100%) rotate(-45deg);
+      background-color: #B14454;
+    }
+  </style>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <div class="box1">
+    <div class="box1_line1"></div>
+    <div class="box1_line2"></div>
+  </div>
+</body>
+
+</html>

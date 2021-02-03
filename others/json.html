@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+
+  <p id='demo'>Data loading, please wait.</p>
+  <script>
+    console.log('hello');
+    var openUrl = "https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=6"
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', openUrl, true);
+    xhr.send();
+    console.log('hello2');
+    xhr.onreadystatechange = function() {
+      if (this.readyState === 4 && this.status === 200) {
+        var data = JSON.parse(this.responseText);
+        console.log(data);
+        document.getElementById("demo").innerHTML = JSON.stringify(data[0]);
+      }
+    };
+  </script>
+</body>
+
+</html>
