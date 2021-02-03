@@ -2,7 +2,9 @@
   padding: 0;
   margin: 5px;
 }
-
+body {
+  background-color: #89D2BA; 
+}
 .container {
   width: 700px;
   margin: 30px auto;
